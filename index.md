@@ -1,10 +1,8 @@
-## Welcome to Laravel Zoho OAuth Documentation
+# Welcome to Laravel Zoho OAuth Documentation
 
 ![run-tests](https://github.com/njoguamos/laravel-zoho-oauth/workflows/run-tests/badge.svg)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/njoguamos/laravel-zoho-oauth.svg?style=flat-square)](https://packagist.org/packages/njoguamos/laravel-zoho-oauth)
 [![Total Downloads](https://img.shields.io/packagist/dt/njoguamos/laravel-zoho-oauth.svg?style=flat-square)](https://packagist.org/packages/njoguamos/laravel-zoho-oauth)
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
 
 ## Prerequisites
@@ -22,9 +20,6 @@ To use this package,
 
 3. Ensure you have Zoho API Client ID, Zoho Client API Secret and Zoho authorization code. If not, [follow these instruction](/laravel-zoho-oauth/instructions)
 
-## Why use this package
-1. To automate generation of a permanent zoho api `refresh_token`
-2. To provide a way of generating zoho api `access_token` which normally expires after a particular period
 
 ## Usage
 
