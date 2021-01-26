@@ -1,9 +1,10 @@
-# Welcome to Laravel Zoho OAuth Documentation
+# Welcome
 
 ![run-tests](https://github.com/njoguamos/laravel-zoho-oauth/workflows/run-tests/badge.svg)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/njoguamos/laravel-zoho-oauth.svg?style=flat-square)](https://packagist.org/packages/njoguamos/laravel-zoho-oauth)
 [![Total Downloads](https://img.shields.io/packagist/dt/njoguamos/laravel-zoho-oauth.svg?style=flat-square)](https://packagist.org/packages/njoguamos/laravel-zoho-oauth)
 
+Welcome to Laravel Zoho OAuth Documentation. Use this package to generate Zoho API access and refresh token in Laravel 7.* and 8.* applications.
 
 ## Prerequisites
 To use this package, 
