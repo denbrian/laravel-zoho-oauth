@@ -134,6 +134,7 @@ $token->revoke();
 Generating `refresh_token` frequently populates the database. As a results it is recommended you schedule the following command
 
 ```php
+
 // app/Console/Kernel.php
 protected function schedule(Schedule $schedule)
 {
@@ -141,3 +142,5 @@ protected function schedule(Schedule $schedule)
     $schedule->command('lzouth:prune')->daily();
     ...
 }
+
+```
