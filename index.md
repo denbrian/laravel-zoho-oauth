@@ -20,7 +20,7 @@ To use this package,
     | Zoho Books        | [API Documentation](https://www.zoho.com/books/api/v3/)       |
     | Zoho Projects     | [API Documentation](https://www.zoho.com/projects/help/rest-api/get-tickets-api.html/)       |
 
-3. Ensure you have Zoho API Client ID, Zoho Client API Secret and Zoho authorization code. If not, [follow these instruction](/instructions)
+3. Ensure you have Zoho API Client ID, Zoho Client API Secret and Zoho authorization code. If not, [follow these instruction](/laravel-zoho-oauth/instructions)
 
 ## Why use this package
 1. To automate generation of a permanent zoho api `refresh_token`
@@ -39,7 +39,7 @@ composer require njoguamos/laravel-zoho-oauth
 
 ### 02 Update your `.env` variables
 
-Add the following vairables and update accordingly. [Follow these instruction](/instructions)
+Add the following vairables and update accordingly. [Follow these instruction](/laravel-zoho-oauth/instructions)
 
 ```dotenv
 # Zoho OAuth Credentials
