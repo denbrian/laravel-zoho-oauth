@@ -4,7 +4,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/njoguamos/laravel-zoho-oauth.svg?style=flat-square)](https://packagist.org/packages/njoguamos/laravel-zoho-oauth)
 [![Total Downloads](https://img.shields.io/packagist/dt/njoguamos/laravel-zoho-oauth.svg?style=flat-square)](https://packagist.org/packages/njoguamos/laravel-zoho-oauth)
 
-Welcome to Laravel Zoho OAuth Documentation. Use this package to generate Zoho API access and refresh token in Laravel 7.* and 8.* applications.
+Welcome to Laravel Zoho OAuth Documentation. Use this package to generate Zoho API access and refresh token in Laravel 8.* and up applications.
 
 ## Prerequisites
 To use this package, 
@@ -57,7 +57,7 @@ php artisan vendor:publish --tag=laravel-zoho-oauth-migrations
 You may export config using the following command,
 
 ```bash
-php artisan vendor:publish --tag=laravel-zoho-oauth-config
+php artisan vendor:publish --tag=zoho-oauth-config
 ```
 
 If you publish, remeber to
@@ -77,7 +77,7 @@ php artisan migrate
 Run the init command ONCE after you install the package. This command add a new record of `refresh_token` and `access_token` to the 'laravel_zoho_oauth_table`
 
 ```bash
-php artisan lzouth:init
+php artisan zoauth:init
 ```
 
 This command may fail:
@@ -89,7 +89,7 @@ This command may fail:
 To generate `access_token` anytime run the following command.
 
 ```bash
-php artisan lzouth:refresh
+php artisan zoauth:refresh
 ```
 
 This command will add a new `access_token` to the database and set it expiration to one hour.
@@ -107,7 +107,7 @@ Schedule the refresh token command in the console kernel. The schedule time shou
 protected function schedule(Schedule $schedule)
 {
     ...
-    $schedule->command('lzouth:refresh')->everyThirtyMinutes();
+    $schedule->command('zoauth:refresh')->everyThirtyMinutes();
     ...
 }
 ```
@@ -135,7 +135,7 @@ Generating `refresh_token` frequently populates the database. As a results it is
 protected function schedule(Schedule $schedule)
 {
     ...
-    $schedule->command('lzouth:prune')->daily();
+    $schedule->command('zoauth:prune')->daily();
     ...
 }
 
