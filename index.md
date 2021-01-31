@@ -51,13 +51,13 @@ ZOHO_SCOPE=
 This package comes with a `migration` and `config` files. You may export migrationn using the following command,
 
 ```bash
-php artisan vendor:publish --tag=laravel-zoho-oauth-migrations
+php artisan vendor:publish --provider="Njoguamos\LaravelZohoOauth\ZohoOauthServiceProvider" --tag="migrations"
 ```
 
 You may export config using the following command,
 
 ```bash
-php artisan vendor:publish --tag=zoho-oauth-config
+php artisan vendor:publish --provider="Njoguamos\LaravelZohoOauth\ZohoOauthServiceProvider" --tag="config"
 ```
 
 If you publish, remeber to
