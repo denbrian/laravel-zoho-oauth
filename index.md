@@ -46,35 +46,34 @@ ZOHO_CODE=
 ZOHO_SCOPE=
 ```
 
-### 03 Customization (Optional)
+### 03 Prepare database
 
-This package comes with a `migration` and `config` files. You may export migrationn using the following command,
+You need to publish the migration to create the `zoho_outh` table:
 
 ```bash
 php artisan vendor:publish --provider="Njoguamos\LaravelZohoOauth\ZohoOauthServiceProvider" --tag="migrations"
 ```
 
-You may export config using the following command,
 
-```bash
-php artisan vendor:publish --provider="Njoguamos\LaravelZohoOauth\ZohoOauthServiceProvider" --tag="config"
-```
-
-If you publish, remeber to
--  maintain `config` variable names, 
-- maintain table name and columens names
-
-### 04 Migrate database
-
-Run the migrate command in order to create the tables needed to store Zoho OAuth data:
+After that, you need to run migrations.
 
 ```bash
 php artisan migrate
 ```
 
+
+### 04 Publishing the config file
+
+You may optinally export config using the following command,
+
+```bash
+php artisan vendor:publish --provider="Njoguamos\LaravelZohoOauth\ZohoOauthServiceProvider" --tag="config"
+```
+
+
 ### 05 Initilize the package
 
-Run the init command ONCE after you install the package. This command add a new record of `refresh_token` and `access_token` to the 'laravel_zoho_oauth_table`
+Run the init command when you have a new `code`. This command add a new record of `refresh_token` and `access_token` to the 'zoho_oauth_table`
 
 ```bash
 php artisan zoauth:init
@@ -112,6 +111,28 @@ protected function schedule(Schedule $schedule)
 }
 ```
 
+## Usage
+
+After installation and initializating, you may get authorization token as follows
+
+```php
+
+$latestToken = Zouath::latest();
+
+$token = $latestToken->authorization_token;
+
+// "Zoho-oauthtoken 1000.27cb28ac001d4f1b610f06c414fc5d5a.8fa8f34f61e4c2cc9c466e8aaccba395"
+
+```
+
+You can go ahead and make api request, example
+
+```bash
+
+#TODO: Add http example 
+
+```
+
 ## Post Installation
 
 ### 01 Revoke and Access Token
@@ -119,10 +140,8 @@ protected function schedule(Schedule $schedule)
 To revoke a refresh token, load it from database and call `->revoke()`
 ```php
 
-use Njoguamos\LaravelZohoOauth\LaravelZohoOauth;
+// Todo: Write revoke method
 
-$token = LaravelZohoOauth::first();
-$token->revoke();
 ```
 
 ### 02 Delete expired access tokens
